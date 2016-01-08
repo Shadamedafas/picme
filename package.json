@@ -12,6 +12,7 @@
     "electron-prebuilt": "^0.36.2"
   },
   "dependencies": {
+    "imgur": "^0.1.7",
     "twilio": "^2.8.0"
   }
 }

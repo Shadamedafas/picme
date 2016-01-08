@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <title>Picme</title>
 
+    <link rel="stylesheet" href="styles/css/app.css">
   </head>
   <body>
+
+    <div class="drop-target"></div>
+
+    <!-- Have to require jQuery this way in Electron due to CommonJS environment -->
+    <script>window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.min.js');</script>
     <script src="app.js"></script>
   </body>
 </html>

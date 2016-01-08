@@ -11,9 +11,16 @@ app.on('window-all-closed', function() {
 });
 
 app.on('ready', function() {
+  var size = electron.screen.getPrimaryDisplay().workAreaSize;
+
   mainWindow = new BrowserWindow({
-    width : 400,
-    height : 400
+    width : 80,
+    height : 80,
+    alwaysOnTop : true,
+    frame : false,
+    resizable : true,
+    x : size.width - 95,
+    y : size.height - 95
   });
 
   mainWindow.loadURL('file://' + __dirname + '/index.html');

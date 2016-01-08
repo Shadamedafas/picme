@@ -1,0 +1,10 @@
+{
+  "twilio" : {
+    "account_sid" : null,
+    "auth_token" : null,
+    "phone_number" : null
+  },
+  "imgur" : {
+    "account_id" : null
+  }
+}
