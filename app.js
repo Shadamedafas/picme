@@ -1,17 +1,18 @@
 var config = require('./config.json');
 
-var twilio = require('twilio')('AC4967590ab5db91810713ab5c7210da6b', 'd06d1376b405bc695542948086e9652c');
+// User will need to create a config.json file with twilio account creds
+var twilio = require('twilio')(config.twilio.account_sid, config.twilio.auth_token);
 var imgur = require('imgur');
 
-imgur.setClientId('fa033d3fa3a0ea3');
+// User will need to create a config.json file with imgur account creds
+imgur.setClientId(config.imgur.account_id);
 
 var dropTarget = $('.drop-target');
 
 var sendImage = function (url) {
   twilio.sendMessage({
-    to : '13213385315',
+    to : config.twilio.phone_number,
     from : '12515807869',
-    body : 'Hello, there.',
     mediaUrl : url
   }, function (error, message) {
     if (!error) {
